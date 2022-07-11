@@ -1,0 +1,78 @@
+%
+% Section: Der erste Abschnitt
+%
+\chapter{Nutzung von intelligente Gesichtserkennungssoftware}
+\label{sec:background:first_section}
+In diesem Kapitel werden auf aktuelle Nutzung und Anforderungen von intelligenter Gesichtserkennungssoftware eingegangen.
+Dabei werden die Aspekte einer hohen Bevölkerungsdichte und schlechtem Wetter betrachtet.
+Diese Aspekte wurden ausgewählt, da bestehende intelligente Gesichtserkennungssoftware in der Lage ist, trotz dieser Bedingungen zu operieren. \cite{Stumm2022}
+Daher muss der gewählt Algorithmus den entsprechenden Anforderungen genüge werden.
+
+\section{Herausforderungen}
+\label{sec:background:first_section:first_section}
+In diesem Kapitel werden auf die aktuellen Anwendungen von bereits bestehenden intelligente Gesichtserkennungssoftware und deren Herausforderungen eingegangen.
+Diese werden als eine Grundlage verwendet, um zu ermitteln, welches System besser geeignet ist für intelligente Gesichtserkennungssoftware.
+Dabei werden die Überwachungssystem in China und London in diesem Kapitel betrachtet, da diese über individuelle Herausforderungen verfügen. \cite{Stumm2022} 
+
+\subsection{Hohe Bevölkerungsdichte}
+\label{subsec:background:first_section:first_subsection}
+Die Herausforderung bei einer hohen Bevölkerungsdichte liegt, dass Personen schnell untertauchen können, und es zu Verwechselungen zwischen verschiedenen Menschen geben kann, sofern diese eine ähnlich Statur und Kleidung tragen. 
+Trotz dieser Probleme kann das Überwachungssystem in China die Person identifizieren. \cite{Stumm2022}
+Daher muss der gewählte Algorithmus eine hohe Präzision haben, damit keine Verwechslungsgefahr besteht und versehentlich die falsche Person beschuldigt wird.
+
+\subsection{Schlechtes Wetter}
+\label{subsec:background:first_section:second_subsection}
+Schlechtes Wetter wie Regen kann dafür sorgen, dass die Bild-/ und Kameraqualität leidet.
+Das kann durch schlechte Lichtverhältnisse bis Wasserperlen im Gesicht gehen (Glanz).
+Dadurch gehe Informationen im Gesicht verloren.
+Dies kann durch andere Algorithmen korrigiert werden, aber diese haben nur eine begrenzte Zeit dies zu tun, da entweder der \ac{DTL} oder \ac{MCTS} eine Zeitnahe Antwort geben muss.
+Das System in London demonstriert ein funktionales Überwachungsaperatus, trotz dieser Herausforderungen. \cite{Stumm2022}
+%
+% Section: Der Zweite Abschnitt
+%
+\section{Probleme}
+\label{sec:background:second_section}
+Dieses Kapitel geht auf die Probleme von intelligenter Gesichtserkennungssoftware ein.
+Dabei werden auf die Probleme Generalisierung, Spezialisierung und Erkennung von Emotionen eingegangen.
+Sowohl Generalisierung als auch Spezialisierung sind ein allgemeines Problem für machine learning.
+Weil intelligente Gesichtserkennungssoftware ein Bestandteil von machine learning ist, sind daher diese beiden Probleme ein wichtiger Entscheidungsmerkmal beim Bestimmen des Algorithmus. \cite{Zhi-Hua}
+Die Erkennung von Emotionen stellt sich als ein Problem dar, da das Ausdrücken dieser über viele Muskeln entsteht und nur durch die korrekte Interpretation, dieser die richtige Antwort getroffen werden kann. \cite{Emotion2020}
+
+\subsection{Überanpassung}
+\label{ssubsec:background:second_section:second_subsection}
+Überanpassung beschreibt das Problem, wenn der Algorithmus zu spezifisch ist und nur für einen bestimmten Fall funktioniert. \cite{Zhi-Hua}
+Dies kann zum Beispiel sein, dass nur Personen mit blauen als glücklich erkannt werden können. 
+Das kann passieren, wenn die Messdaten nicht gut gewählt wurden und nur glückliche Personen mit blauen Augen gewählt wurden oder es kann auch am Code des Algorithmus liegen.
+Im Falle der Messdaten kann man diese korrigieren, wenn es am Code liegt wird es schwierig festzustellen, welcher Parameter eine zu hohe oder zu niedrige Priorität hat.
+\ref{fig:Fitting} stellt das Problem dar.
+
+
+\begin{figure}[h!]
+ \centering
+ \includegraphics[width=1.0\textwidth]{gfx/Picture/Overfitting_Underfitting}
+ \caption{Beispiel f{\"u}r {\"U}beranpassung \& Unteranpassung anhand von einem Blatt \cite{Zhi-Hua}}
+ \label{fig:Fitting}
+\end{figure}
+
+\subsection{Unteranpassung}
+\label{subsec:background:second_section:first_subsection}
+Im Gegensatz zur Überanpassung ist die Unteranpassung das Problem, wenn der Algorithmus zu allgemein ist. 
+Dabei werden zu allgemeine Charakteristiken verwendet. \cite{Zhi-Hua}
+Dies hat zur Folge, dass im Falle der Gesichtserkennung zum Beispiel Personen mit Augen als glücklich festgestellt werden.
+Dieses Problem kann man mit besseren Messdaten oder mit einem stärker angepassten Algorithmus.
+Das hat wiederum die Gefahr der Überanpassung. 
+Deshalb ist es wichtig, dass der Fall von Unterpassung oder Überanpassung nicht passiert, da ansonsten im medizinischen Feld das Falsche diagnostiziert wird oder bei einer Fahndung die falsche Person verhaftet wird.
+Siehe zum Beispiel \ref{fig:Fitting}.
+Obwohl diese Probleme nicht direkt mit dem Konzept der Algorithem zu tun hat, werden diese in dieser Arbeit beleuchtet, da die beiden Algorithem verschiedene Ansätze im Konzept haben, um diese Probleme zu minimieren.
+
+\subsection{Erkennung von Emotionen}
+\label{ssubsec:background:second_section:third_subsection}
+Erkennung von Emotionen wurde als ein Punkt bei der Entscheidung für den Algorithmus gewählt, da diese in Medizin verwendet werden soll.
+Explizit soll intelligente Gesichtserkennung verwendet werden, um Personen mit zum Beispiel Depression oder chronischen Schmerzen zu erkennen, damit diesen geholfen werden kann. \cite{Emotion2020}
+Dabei besteht das großte Problem, dass ein Computer die menschlichen Emotionen nur in einer 2-Dimensionalen-Welt analysieren kann, obwohl diese 3-Dimensional sind.
+Menschen erkennen die Emotionen von anderen Menschen anhand der Persönlichkeit, Stimmung und Laune.
+Der Computer hingegen kann nur die Emotionen anhand von Pixeln in einem Bild erkennen.
+Deswegen ist dies ein Problem. \cite{Emotion2020}
+Aufgrund der Wichtigkeit, dass der Algorithmus im Bereich der Medizin keine Falschdiagnose gibt, muss daher der dahinter liegende Algorithmus über eine hohe Präzision haben, da es ansonsten Menschenleben kosten kann.
+
+
