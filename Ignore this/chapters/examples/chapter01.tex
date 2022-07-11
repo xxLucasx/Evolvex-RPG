@@ -1,14 +1,28 @@
 \chapter{Main game play}
 \label{ch:gameplay}
-%
-% Section: Motivation
-%
+
+\section{Feeding}
+\label{sec:gameplay:Feeding}
+
+Feeding has two phases one for herbivores and one for carnivores.\newline
+Omnivores can partcipate in both phases.\newline
+\newline
+1. Phase\newline
+\newline
+Herbivores/Omnivores will feed from a pool.\newline
+(1d100+\ac{S})* \ac{FM}* square(\ac{T})=\ac{F}.\newline
+\newline
+2. Phase\newline
+\newline
+Carnivores/Omnivores will feed by attacking other animals\newline
+(\ac{D}*square(\ac{T})*\ac{S}-(\ac{A}*square(\ac{T})*\ac{S})=\ac{F}.\newline
+\newline
+If a species has no population it becomes extinct.
 
 \section{Social}
 \label{sec:gameplay:Social}
 
 This phase determines how they interact with other species in their territory:
-
 \begin{itemize}
 	\item Aggressive
 	\item Cooperative
@@ -17,45 +31,83 @@ This phase determines how they interact with other species in their territory:
 	\item Hostile
 	\item Special
 \end{itemize}
+Aggressive stance increases the amount of territory you control, but reduces the efficiency of your feeding\newline +10\% \ac{TM}, -10\% \ac{FM}\newline\newline
+Cooperative decreases the amount of territory you control, but increases the efficiency of your feeding\newline -15\% \ac{TM}, 15\% \ac{FM} (my idea also add "`trade"' deals).\newline\newline
+Neutral\newline You gain no modifiers\newline\newline
+Defensive\newline -10\% \ac{TM} + 2 \ac{D}\newline\newline
 
-Aggressive stance increases the amount of territory you control, but reduces the efficiency of your feeding +10\%Territory gain, -10\%food gain\newline
-Cooperative decreases the amount of territory you control, but increases the efficiency of your feeding -15\% territory gain, 15\% food gain (my idea also add "`trade"' deals.\newline
-Neutral, You gain no modifiers\newline
-Defensive  -10\% territory gain + 2 defense\newline
-Hostile Generally only available to carnivores, this allows you to outright attack other species.\newline
+\begin{table}[hp]
+	\centering
+		\begin{tabular}{|l|l|l|}
+		\hline
+		Roll & Description & Effect\\
+		\hline
+		0 & blah & +10\% \ac{TM}\\
+		\hline	
+		1 & xxx & +5\% \ac{FM}\\
+		\hline
+		2 & aasd & \ac{TM}\\
+		\hline
+		3 & asd & Roll species event\\  
+		\hline
+		\end{tabular}
+	\caption{Events}
+	\label{tab:Events}
+\end{table}
 
-Players gain new territory with  Explorer skill + D10
-
-They can move into new tiles = Movement skill/4 rounded up
-
-Species can attack other species' territory, to gain territory as well.  Species require aggressive stance and a trait that lets them attack. (Work In progress)
-
-\section{Feeding}
-\label{sec:gameplay:Feeding}
-
-Feeding has two phases one for herbivores and one for carnivores.
-Omnivores can partcipate in both phases.
-
-1. Phase
-
-Herbivores/Omnivores will feed from a pool.
-Add Formular from feeding here.
-
-2. Phase
-
-Carnivores/Omnivores will feed by attacking other animals
-Add Formular from feeding here.
-
-If a species has no population it becomes extinct 
-
-(Add social event here)
-(Add here maybe "`trading"')
+\begin{table}[h]
+	\centering
+		\begin{tabular}{|l|l|l|}
+		\hline
+		Roll & Description & Effect\\
+		\hline
+		0 & asd & symbiosis\\
+		\hline	
+		1 & asd & test\\
+		\hline
+		\end{tabular}
+	\caption{SpecialEvent}
+	\label{tab:SpecialEvent}
+\end{table}
 
 \section{Evolution}
 \label{sec:gameplay:Evolution}
 
+Players can evolve traits, Each trait cost EVO points, you may also upgrade traits.
+There are many traits, so will need to ask GM for trait cost if it is not listed here.
+You can spend evo points equal to a skill to level it up, so to level up explore from 5 to 6, would cost 5 evo points.
+Species generally need a trait for reproducing/breathing/eating/moving.
+\newline
+You gain 1 EVO points each time your species loses population, from natural selection.
+Your species also gains 5 Evo points each time you reach a milestone population, this includes your starting pop.\newline10,20,50,100,200,500,1000,2000,5000…
+You gain 5 EVO points each time you can fully feed your species, otherwise gain 3 EVO points.
+\newline
+Your first 3 non-innate traits have no additional cost, after that you must spend an additional 5 evo points per trait, this cost increases by 5 for each set of 3 traits you have (not including your first).
+\newline
+You can spend 10\% of your pops worth food to increase your intelligence by 1. Intelligence has milestones at 5/10/15/20/25… giving 5 evo points each time. You cannot buy intelligence with evo points
+
+
 \section{Mating}
 \label{sec:gameplay:Mating}
+Mating equations can vary based on sexual organ types, and birthing methods. But a general equation will go as such:\newline
+30\% of current population* pop growth multiplier\newline\newline
+If food required is higher then food scavenged use the following:\newline
+-30\% of current population*((food required-food scavenged)/food required)*pop growth multiplier.
 
 \section{Event}
 \label{sec:gameplay:Event}
+These represent big changes to the world, these can positively or negatively affect the amount of food in pools, events can cause new species to emerge, and open new areas of the map.
+\begin{table}[h]
+	\centering
+		\begin{tabular}{|l|l|l|}
+		\hline
+		Roll & Description & Effect\\
+		\hline
+		0 & asd & test\\
+		\hline	
+		1 & asd & test\\
+		\hline
+		\end{tabular}
+	\caption{MajorEvent}
+	\label{tab:MajorEvent}
+\end{table}

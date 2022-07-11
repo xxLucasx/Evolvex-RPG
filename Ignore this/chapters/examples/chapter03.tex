@@ -1,177 +1,133 @@
-\chapter{Algorithem}
+\chapter{Traits}
 \label{ch:chapter03}
-In diesem Kapitel werden die Algorithem \ac{DTL} oder \ac{MCTS} erklärt.
-Anschließend werden diese unter den Aspekten der Probleme und Herausforderungen betrachtet.
+\renewcommand{\tabularxcolumn}[1]{>{\raggedright\arraybackslash\setlength{\parskip}{.5em}}p{#1}}
 
-%
-% Section: Listen
-%
-\section{Decision Tree Learning}
-\label{sec:chapter03:listen}
-Der \ac{DTL} 
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\hline
+		Exoskeleton* & \ac{D}/Level\&-33\% Damage Taken, +10\% \ac{FC}\\
+		\hline	
+		Cephalothorax/ horax & \ac{S}: 1, +0.5 for level 2/3\\
+		\hline
+		Striped Muscles & +2 \ac{A}/level +10\%\ac{A}\\
+		\hline
+		Segmented Body & +1\ac{C}/level, +1\ac{M}/level\\
+		\hline
+		Complete digestive system & with mouth and anus, Mouthparts can be adapted for various modes of feeding +2 \ac{S}/level\\
+		\hline
+		Open circulatory system & with dorsal heart and arteries but without capillaries -1\ac{D}\\
+		\hline
+		Book-Lungs/ Trachea & Breath air\\
+		\hline
+		Gills & Breath water\\
+		\hline
+		Internal fertilization & +30\%/15\%/10\% to pop growth per level 1/2/3 , Larvae may be targeted for attack\\
+		\hline
+		Annelidan Nervous System & a dorsal brain connected with a nerve ring to a double ventral nerve cord(intelligence is possible). Starts with 2\ac{I}, level 2 allows you to attack creatures with higher defence. Level 3 unlocks Hive mind(Work in progress).\\
+		\hline
+		\end{tabularx}
+	\caption{Inniate Traits}
+	\label{tab:InniateTraits}
+\end{table}
 
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\hline
+		Herbivore & +25\% \ac{FM}/level\\
+		\hline
+		Omnivore & +10\% \ac{FM}/level\\
+		\hline
+		Carnivore & +20\% \ac{FM}/level\\
+		\hline
+		\end{tabularx}
+	\caption{Vore Traits}
+	\label{tab:VoreTraits}
+\end{table}
 
-%
-% Section: Grafiken
-%
-\section{Grafiken}
-\label{sec:chapter03:grafiken}
-Morbi magna augue, scelerisque in eleifend a, tristique vitae lorem. Vivamus non elementum nisi. Aliquam erat volutpat. Nunc pharetra, tortor ut adipiscing bibendum, orci ipsum mollis felis, ut euismod eros purus at tellus. Sed blandit eros at ante mattis in elementum tortor pharetra. Vivamus molestie mattis orci. Quisque ullamcorper, purus sit amet luctus viverra, turpis arcu imperdiet eros, sit amet viverra nisi ligula ut felis.
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Movement Traits}
+	\label{tab:Movement}
+\end{table}
 
-\subsection{Einfache Grafiken}
-\label{sec:chapter03:grafiken:simple}
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec sed ante odio. Integer semper, nibh id sollicitudin adipiscing, odio elit blandit mi, sit amet luctus mauris velit nec velit. Aenean commodo cursus magna, id mollis sapien gravida eu. Aenean eleifend, leo dignissim sodales mattis, tellus ante tempor nunc, vulputate tristique nisl metus sit amet tellus. Nullam sollicitudin, metus sit amet sagittis interdum, metus purus dapibus lacus, pharetra lobortis erat enim a leo. Suspendisse a augue in purus tempor blandit. Aliquam malesuada porttitor nibh vel adipiscing. In mi est, vulputate nec dapibus quis, pharetra vel lacus. Sed pellentesque egestas pretium. Praesent orci risus, ornare non accumsan id, gravida sed lectus. Mauris fermentum viverra neque at dignissim. Sed consectetur auctor lorem, eget volutpat urna sodales id. Etiam pellentesque velit quis sapien tempus convallis. 
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\hline
+		Internal fertilization & +30\%/15\%/10\% to pop growth per level 1/2/3 , Larvae may be targeted for attack\\
+		\hline
+		\end{tabularx}
+	\caption{Reproductive Traits}
+	\label{tab:ReproductiveTraits}
+\end{table}
 
-\begin{figure}[htbp]
- \centering
- \includegraphics[width=0.5\textwidth]{gfx/examples/setup}
- \caption{Dies ist eine einfache Grafik}
- \label{fig:chapter03:setup}
-\end{figure}
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Specialized Limbs}
+	\label{tab:SpecializedLimbs}
+\end{table}
 
-Aenean blandit neque eget nunc euismod ac dignissim enim euismod. Nullam semper, orci vitae elementum pretium, est lorem sodales justo, id lobortis nunc felis et justo. Cras tortor orci, rhoncus a commodo quis, aliquam eu dui. Donec pulvinar, arcu ornare consequat ultricies, purus dui accumsan massa, id auctor magna justo nec risus. Nulla bibendum, est nec ornare venenatis, lacus diam pretium augue, sed convallis orci sapien vitae lectus. In blandit massa aliquam felis feugiat fringilla.
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Defensive Traits}
+	\label{tab:DefensiveTraits}
+\end{table}
 
-\subsection{Grafiken mit Subfloat}
-\label{sec:chapter03:grafiken:subfloat}
-Quisque non massa neque. In at placerat lacus. Integer urna augue, laoreet ac mattis sed, posuere ut turpis. Nunc a metus quis elit placerat ultricies vel a eros. Quisque condimentum aliquet fermentum. Integer arcu est, suscipit quis lacinia at, volutpat nec tortor. Proin feugiat tristique est eget luctus. Suspendisse porta mauris sed sapien egestas sit amet volutpat tellus ultricies. Nulla vulputate semper turpis sed blandit. Phasellus at tortor pulvinar nisi luctus gravida.
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Aggressive Traits}
+	\label{tab:AggressiveTraits}
+\end{table}
 
-\begin{figure}[bth]
-  \myfloatalign
-  \subfloat[Asia personas duo.]{
-     \label{fig:chapter03:subfloat:grafik1}
-     \includegraphics[width=.45\linewidth]{gfx/examples/qq-plot_gaus_vs_160}
-   } \quad
-   \subfloat[Pan ma signo.] {
-     \label{fig:chapter03:subfloat:grafik2}
-     \includegraphics[width=.45\linewidth]{gfx/examples/pdf_gaus_vs_uni_vs_10_40_160}
-   } \\
-   \subfloat[Methodicamente o uno.]{
-     \label{fig:chapter03:subfloat:grafik3}
-     \includegraphics[width=.45\linewidth]{gfx/examples/pdf_gaus_vs_uni_vs_10_40_160}
-   } \quad
-   \subfloat[Titulo debitas.]{
-     \label{fig:chapter03:subfloat:grafik4}
-     \includegraphics[width=.45\linewidth]{gfx/examples/qq-plot_gaus_vs_160}
-   }
-   \caption[Subfloat - Figure]{Mit Subfloat lassen sich mehrere Grafiken neben- und untereinander darstellen. Jeder Figure kann dabei mit einem eigenen Text versehen werden.}
-   \label{fig:chapter03:subfloat}
-\end{figure}
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Biome Traits}
+	\label{tab:BiomeTraits}
+\end{table}
 
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Scavenging Traits}
+	\label{tab:ScavengingTraits}
+\end{table}
 
-\subsection{Grafiken mit Minipage}
-\label{sec:chapter03:grafiken:minipage}
-Donec gravida consequat arcu, et mollis tortor posuere vitae. Sed pharetra turpis a ante commodo accumsan. Suspendisse leo nulla, accumsan sit amet dapibus in, posuere eget turpis. Vivamus enim sapien, porta id placerat eget, laoreet sed massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Intelligence Traits}
+	\label{tab:IntelligenceTraits}
+\end{table}
 
-\begin{figure}[htbp]
-  \centering
-  \begin{minipage}[b]{5 cm}
-    \includegraphics[width=\linewidth]{gfx/examples/qq-plot_gaus_vs_160} 
-    \caption{Minipage-Grafik Nummero uno}
-    \label{fig:chapter03:minipage:grafik1}
-  \end{minipage}
-  \begin{minipage}[b]{5 cm}
-    \includegraphics[width=\linewidth]{gfx/examples/pdf_gaus_vs_uni_vs_10_40_160}  
-    \caption{Minipage-Grafik Nummer zwei}
-    \label{fig:chapter03:minipage:grafik2}
-  \end{minipage}
-\end{figure}
-
-In vitae est eget velit mattis lobortis. In hac habitasse platea dictumst. Quisque aliquam quam et justo pellentesque ullamcorper. Curabitur elementum mattis leo facilisis tincidunt. Fusce posuere viverra ultricies. Cras eget velit et ipsum gravida imperdiet et hendrerit orci.
-
-Maecenas fringilla viverra urna ut egestas. Nulla sagittis molestie libero eget luctus. Nulla non odio sit amet magna vehicula tincidunt. Nulla accumsan ornare placerat. In posuere scelerisque quam, sed posuere urna eleifend quis. Pellentesque sed quam quis dui vulputate convallis ut ac diam. In hac habitasse platea dictumst. Donec molestie auctor dapibus. Vivamus in erat risus, ut aliquet diam. Duis vel velit ante, id ullamcorper turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan ornare tellus a porttitor. Etiam facilisis dui et sem eleifend id luctus nisl scelerisque. Aenean quis commodo libero. Nulla quis semper dolor. 
-
-%
-% Section: Tabellen 
-%
-\section{Tabellen}
-\label{sec:chapter03:tabellen}
-Sed lobortis vestibulum euismod. Vivamus vestibulum gravida nisi vitae condimentum. Nullam nec lacus nibh. Phasellus arcu magna, varius eget viverra a, elementum eu dolor. Aliquam erat volutpat. Sed nibh leo, vestibulum quis lacinia in, vestibulum sollicitudin nulla. In iaculis, purus in imperdiet sagittis, tortor diam pellentesque lectus, eget faucibus ante elit at tortor.
-
-%
-% Section: Listings 
-%
-\section{Listings}
-\label{sec:chapter03:listings}
-Aliquam ut pretium lectus. Curabitur in eros et sapien aliquet luctus ut sit amet eros. Proin et libero non mi venenatis aliquet at sed lorem. Ut sed enim mi, id viverra eros. Cras metus ante, placerat id commodo at, molestie non libero. Aenean eu risus erat, vel consequat metus. Sed malesuada metus sit amet nisl viverra hendrerit.
-
-
-%
-% Section: Equations
-%
-\section{Equations}
-\label{sec:chapter03:equations}
-Pellentesque sed quam quis dui vulputate convallis ut ac diam. In hac habitasse platea dictumst. Donec molestie auctor dapibus. Vivamus in erat risus, ut aliquet diam. Duis vel velit ante, id ullamcorper turpis.
-%
-\begin{equation}
- U = R * I
-\end{equation}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan ornare tellus a porttitor. Etiam facilisis dui et sem eleifend id luctus nisl scelerisque. Aenean quis commodo libero. Nulla quis semper dolor.
-%
-\begin{equation}
- I = \frac{U}{R} 
-\end{equation}
-
-In the following we use probability theory to derive closed-form expressions for the fairness that is achieved among $M$ contending stations. We tag station $M$ and denote $K_i$ the inter-transmissions of station $i = 1 \dots M-1$ and let $K = \sum_{i=1}^{M-1} K_i$. The conditional probability $P[K\!=\!k|l]$ can be defined for $M \ge 2$ as
-%
-\begin{equation}
-\mathsf{P}[K\!=\!k|l] = \mathsf{P} \Biggl[\sum_{i=1}^{M-1} K_i = k \Big| l \Biggr]
-\label{eq:chapter03:exactpmf}
-\end{equation}
-%
-where the random variables $K_i$ are the integers that satisfy
-%
-\begin{equation*}
-\sum_{j=1}^{K_i} b_i(j) \le \sum_{j=1}^{l} b_M(j) \;\;\; \textmd{and} \;\;\; \sum_{j=1}^{K_i+1} b_i(j) > \sum_{j=1}^{l} b_M(j) .
-\end{equation*}
-
-
-%
-% Section: Theorem and Proof
-%
-\section{Theorem and Proof}
-\label{sec:chapter03:theorem}
-We use the central limit theorem to derive the long-term fairness. In the sequel, we denote normal random variables $N(\mu,\sigma^2)$ where $\mu$ is the mean and $\sigma^2$ the variance.
-%
-\begin{Theorem}[Gaussian approximation]
-\label{th:chapter03:twostationsgaussian}
-%
-Let the $b_i(j)$ be i.i.d. random variables with mean $\mu$ and variance $\sigma^2$ and let $M=2$. For $k,l \gg 1$ (\ref{eq:chapter03:exactpmf}) is approximately Gaussian where
-%
-\begin{equation*}
-\mathsf{P}[K \!\le\! k|l] \approx \mathsf{P}\biggl[ N(0,1) \le \frac{\mu\,(k-l)}{\sigma\,\sqrt{k+l}} \biggr] .
-\end{equation*}
-%
-\end{Theorem}
-%
-\begin{proof}
-%
-For $M=2$ we have from (\ref{eq:chapter03:exactpmf}) that
-%
-\begin{equation*}
-\mathsf{P}[K \!<\! k|l] = \mathsf{P} \Biggl[\, \sum_{j=1}^k b_1(j) > \sum_{j=1}^l b_2(j) \Biggr]
-\end{equation*}
-%
-and after expansion and some normalization this equals
-%
-\begin{equation*}
-= \mathsf{P}\Biggl[ \frac{\sum_{j=1}^{l}b_2(j) - l\mu}{\sigma\sqrt{l}} - \frac{\sum_{j=1}^{k}b_1(j) - k\mu}{\sigma\sqrt{l}} < \frac{\mu(k-l)}{\sigma\sqrt{l}} \Biggr].
-\end{equation*}
-%
-Using the central limit theorem it follows that
-%
-\begin{equation*}
-\mathsf{P}[K \!<\! k|l] \approx \mathsf{P} \biggl[ N(0,1) - N \biggl(0,\frac{k}{l}\biggr) < \frac{\mu(k-l)}{\sigma\sqrt{l}} \biggr] .
-\end{equation*}
-%
-Since the normal distribution with zero mean is symmetric we can replace the subtraction of $N(0,k/l)$ by addition. Furthermore, the sum of two normal random variables $N(\mu_1, \sigma_1^2)$ and $N(\mu_2, \sigma_2^2)$ is normal with $N(\mu_1+\mu_2, \sigma_1^2+ \sigma_2^2)$ such that
-%
-\begin{equation*}
-\mathsf{P}[K \!<\! k|l] \approx \mathsf{P} \biggl[ N\biggl(0,\frac{k+l}{l}\biggr) < \frac{\mu(k-l)}{\sigma\sqrt{l}} \biggr] .
-\end{equation*}
-%
-Finally, we use that if $X$ is $N(a\mu,a^2\sigma^2)$ then $Y = X/a$ is $N(\mu,\sigma^2)$ with $a^2 = (k+l)/l$ to standardize the result.
-%
-\end{proof}
-
-Th. \ref{th:chapter03:twostationsgaussian} assumes i.i.d. random countdown values. It does, however, not make any assumption about their distribution.
+\begin{table}[h]
+		\begin{tabularx}{\linewidth}{|l|X|}
+		\hline
+		Name & Bonus\\
+		\end{tabularx}
+	\caption{Other Traits}
+	\label{tab:OtherTraits}
+\end{table}
